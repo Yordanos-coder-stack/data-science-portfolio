@@ -39,23 +39,8 @@ const projects = [
     tags: ["Python", "XGBoost", "Sklearn"],
     category: "Machine Learning",
     metrics: { accuracy: "94%", improvement: "+23%" }
-  },/*
-  {
-    title: "Real-time Sentiment Analysis",
-    description: "Developed a deep learning NLP system for analyzing social media sentiment in real-time using BERT and streaming data pipelines.",
-    image: "https://images.unsplash.com/photo-1644088379091-d574269d422f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMHRlY2hub2xvZ3klMjBuZXR3b3JrfGVufDF8fHx8MTc3MDU2MjUwMnww&ixlib=rb-4.1.0&q=80&w=1080",
-    tags: ["PyTorch", "BERT", "Kafka", "NLP"],
-    category: "Deep Learning",
-    metrics: { f1Score: "0.91", throughput: "10k/sec" }
-  },*/
-  /*{
-    title: "Sales Forecasting Dashboard",
-    description: "Created an interactive dashboard with time series forecasting models (ARIMA, Prophet) to predict sales trends across multiple regions.",
-    image: "https://images.unsplash.com/photo-1759661966728-4a02e3c6ed91?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXRhJTIwdmlzdWFsaXphdGlvbiUyMGRhc2hib2FyZHxlbnwxfHx8fDE3NzA1OTI5NDl8MA&ixlib=rb-4.1.0&q=80&w=1080",
-    tags: ["Prophet", "Tableau", "Python", "SQL"],
-    category: "Analytics",
-    metrics: { mape: "8.2%", regions: "15+" }
-  },*/
+  },
+ 
   {
     title: "Computer Vision Object Detection",
     description: "Implemented YOLOv8 for real-time object detection in manufacturing quality control, reducing defect rates by 40%.",
@@ -63,15 +48,7 @@ const projects = [
     tags: [, "OpenCV", "TensorFlow",],
     category: "Computer Vision",
     metrics: { accuracy: "96%", fps: "30" }
-  },/*
-  {
-    title: "Recommendation Engine",
-    description: "Built a hybrid recommendation system combining collaborative filtering and content-based approaches, increasing user engagement by 35%.",
-    image: "https://images.unsplash.com/photo-1627398242454-45a1465c2479?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXRhJTIwc2NpZW5jZSUyMGFuYWx5dGljcyUyMGNvZGV8ZW58MXx8fHwxNzcwNjE1MTU5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-    tags: ["Python", "Spark", "ALS", "Redis"],
-    category: "Machine Learning",
-    metrics: { ctr: "+35%", users: "1M+" }
-  },*/
+  },
   {
     title: "Fraud Detection System",
     description: "Developed an anomaly detection system using isolation forests and autoencoders to identify fraudulent transactions in real-time.",
