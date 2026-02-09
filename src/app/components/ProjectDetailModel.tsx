@@ -426,7 +426,7 @@ export function ProjectDetailModal({ project, open, onClose }: ProjectDetailModa
             <Button
               variant="outline"
               className="flex-1 border-purple-600 text-purple-600 hover:bg-purple-50"
-              onClick={() => window.open("#", "_blank")}
+              onClick={() => window.open("https://github.com/Yordanos-coder-stack", "_blank")}
             >
               <ExternalLink className="mr-2" size={18} />
               Live Demo
