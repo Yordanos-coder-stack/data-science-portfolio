@@ -17,35 +17,7 @@ const experiences = [
       "Collaborated with agronomists to translate data insights into actionable recommendations for farmers"
     ],
     skills: ["Python", "sklearn", "Pandas", "Matplotlib", "Jupyter Notebook",]
-  },/*
-  {
-    type: "work",
-    title: "Data Scientist",
-    organization: "Analytics Solutions Ltd.",
-    period: "2020 - 2022",
-    location: "San Francisco, CA",
-    description: "Developed end-to-end machine learning solutions for various business problems, from data collection to model deployment.",
-    achievements: [
-      "Built recommendation system serving 2M+ users daily",
-      "Automated reporting workflows saving 20 hours per week",
-      "Implemented A/B testing framework for product features"
-    ],
-    skills: ["Python", "Scikit-learn", "PostgreSQL", "Docker"]
-  },
-  {
-    type: "work",
-    title: "Junior Data Analyst",
-    organization: "Data Insights Corp.",
-    period: "2019 - 2020",
-    location: "New York, NY",
-    description: "Performed statistical analysis and created dashboards to visualize key business metrics and trends.",
-    achievements: [
-      "Created 15+ interactive dashboards in Tableau",
-      "Conducted statistical analyses supporting strategic decisions",
-      "Collaborated with cross-functional teams on data projects"
-    ],
-    skills: ["SQL", "Tableau", "R", "Excel"]
-  }*/
+  }
 ];
 
 const education = [
@@ -57,15 +29,7 @@ const education = [
     gpa: "expected",
     highlights: ["BNMIL community member"]
     
-  },/*
-  {
-    degree: "B.S. in Computer Science",
-    institution: "UC Berkeley",
-    period: "2013 - 2017",
-    description: "Concentration in artificial intelligence and data structures.",
-    gpa: "3.8/4.0",
-    highlights: ["Summa Cum Laude", "ACM Member", "Hackathon Winner"]
-  }*/
+  }
 ];
 
 const certifications = [
