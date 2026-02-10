@@ -33,7 +33,7 @@ export function ProjectDetailModal({ project, open, onClose }: ProjectDetailModa
 
   // Extended project details
   const projectDetails: Record<string, any> = {
-        "Website for online marketing":{
+      "Website for online marketing":{
       fullDescription:"Built on HTML, CSS, and JavaScript, this responsive website features a clean design and intuitive navigation.And also built its backend with Node.js integrate into mongoDB",
       technologies:["HTML","CSS","JavaScript","Node.Js","MongoDB"],
       timeline: "1 months",
