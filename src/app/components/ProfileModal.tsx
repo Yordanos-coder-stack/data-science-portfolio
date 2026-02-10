@@ -11,7 +11,7 @@ interface ProfileModalProps {
 
 export function ProfileModal({ open, onClose }: ProfileModalProps) {
   const stats = [
-    { label: "Years Experience", value: "0" },
+    { label: "Years Experience", value: "1" },
     { label: "Projects Completed", value: "4" },
     { label: "Technologies", value: "20+" },
     { label: "Certifications", value: "5" }
