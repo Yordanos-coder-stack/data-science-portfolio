@@ -12,7 +12,7 @@ interface ProfileModalProps {
 export function ProfileModal({ open, onClose }: ProfileModalProps) {
   const stats = [
     { label: "Years Experience", value: "1" },
-    { label: "Projects Completed", value: "4" },
+    { label: "Projects Completed", value: "5" },
     { label: "Technologies", value: "15+" },
     { label: "Certifications", value: "5" }
   ];
