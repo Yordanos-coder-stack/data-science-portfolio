@@ -12,7 +12,7 @@ const projects = [
     title: "Website for online marketing",
     description: "Built on HTML, CSS, and JavaScript, this responsive website features a clean design and intuitive navigation. It includes a contact form and integrates with social media platforms to enhance online presence.",
     image: "https://continuinged.utah.edu/_resources/images/_d1/anc/featured-images/mktg231.jpg",
-    tags: ["HTML", "CSS", "JavaScript"],
+    tags: ["HTML", "CSS", "JavaScript","Node.Js","MongoDB"],
     category: "Web Development",
     metrics: { performance: "95%", responsiveness: "+20%" }
   },
