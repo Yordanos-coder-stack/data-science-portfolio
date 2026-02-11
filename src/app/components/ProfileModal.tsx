@@ -26,7 +26,7 @@ export function ProfileModal({ open, onClose }: ProfileModalProps) {
   const socialLinks = [
     { icon: Github, label: "GitHub", href: "https://github.com/Yordanos-coder-stack", username: "Yordanos-coder-stack" },
     { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/yordanos-fentahun-987466361/", username: "Yordanos-fentahun" },
-    { icon: Twitter, label: "Twitter", href: "https://twitter.com", username: "@yordanos_data" }
+    { icon: Twitter, label: "Twitter", href: "https://x.com/YordanosFe16682", username: "@yordanos_data" }
   ];
 
   return (
