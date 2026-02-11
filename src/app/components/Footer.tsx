@@ -130,7 +130,7 @@ export function Footer() {
   );
 }
 
-/* ✅ Updated Newsletter Form with Formspree */
+/*  Updated Newsletter Form with Formspree */
 function NewsletterForm() {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<{
