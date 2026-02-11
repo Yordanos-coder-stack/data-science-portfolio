@@ -9,7 +9,7 @@ export function Footer() {
     { icon: Github, href: "https://github.com/Yordanos-coder-stack", label: "GitHub" },
     { icon: Linkedin, href: "https://www.linkedin.com/in/yordanos-fentahun-987466361/", label: "LinkedIn" },
     { icon: Twitter, href: "https://x.com/YordanosFe16682", label: "Twitter" },
-    { icon: Mail, href: "mailto:yordanosfentahundata@gmail.com", label: "Email" }
+    { icon: Mail, href: "https://x.com/YordanosFe16682", username: "@yordanos_data" }
   ];
 
   const footerLinks = [
