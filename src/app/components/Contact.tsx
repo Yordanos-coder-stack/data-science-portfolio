@@ -56,7 +56,7 @@ export function Contact() {
   const socialLinks = [
     { icon: Github, href: "https://github.com/Yordanos-coder-stack", label: "GitHub", color: "hover:text-gray-900" },
     { icon: Linkedin, href: "https://www.linkedin.com/in/yordanos-fentahun-987466361/", label: "LinkedIn", color: "hover:text-blue-600" },
-    { icon: Twitter, href: "https://twitter.com", label: "Twitter", color: "hover:text-sky-500" },
+    { icon: Twitter, href: "https://x.com/YordanosFe16682", username: "@yordanos_data", color: "hover:text-sky-500" },
     { icon: Mail, href: "mailto:yordanosfentahundata@gmail.com", label: "Email", color: "hover:text-purple-600" }
   ];
 
