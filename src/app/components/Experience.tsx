@@ -24,7 +24,7 @@ const education = [
   {
     degree: "Bachelor of Science in Data Science",
     institution: "Bahir Dar University",
-    period: "2022 - present",
+    period: "2023 - present",
     description: "Focused on machine learning, data analysis, and big data technologies. Completed coursework in statistical modeling, data mining, and deep learning.",
     gpa: "expected",
     highlights: ["BNMIL community member"]
