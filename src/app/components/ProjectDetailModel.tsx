@@ -35,7 +35,7 @@ export function ProjectDetailModal({ project, open, onClose }: ProjectDetailModa
   const projectDetails: Record<string, any> = {
     "Business Sales Performance Analytics":{
       fullDescription:"Performed Exploratory Data Analysis (EDA) & KPI analysis Analyzed sales & profit by region, category, and segment Built RandomForestRegressor to predict profit Conducted customer segmentation using K-Means Forecasted future sales using Prophet.",
-      technologies:["Python","K-Meanst","RandomForestRegressor","Sklearn"],
+      technologies:["Python","K-Means","RandomForestRegressor","Sklearn"],
       timeline: "1 weak",
       team: "1 project",
       role: "Analytics"
