@@ -9,6 +9,18 @@ import { ProjectDetailModal } from "./ProjectDetailModel";
 
 const projects = [
   {
+    title: "Business Sales Performance Analytics",
+    description: "Performed Exploratory Data Analysis (EDA) & KPI analysis
+Analyzed sales & profit by region, category, and segment
+Built RandomForestRegressor to predict profit
+Conducted customer segmentation using K-Means
+Forecasted future sales using Prophet.",
+    image: "https://demandzen.com/wp-content/uploads/2025/12/Analytics-and-Sales-Performance_-Metrics-That-Drive-Revenue-Growth.jpg",
+    tags: ["Python", "K-Meanst", "Sklearn"],
+    category: "Analytics",
+    
+  },
+  {
     title: "Website for online marketing",
     description: "Built on HTML, CSS, and JavaScript, this responsive website features a clean design and intuitive navigation. It includes a contact form and integrates with social media platforms to enhance online presence.",
     image: "https://continuinged.utah.edu/_resources/images/_d1/anc/featured-images/mktg231.jpg",
