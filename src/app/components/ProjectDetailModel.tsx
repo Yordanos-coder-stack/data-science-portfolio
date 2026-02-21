@@ -33,6 +33,13 @@ export function ProjectDetailModal({ project, open, onClose }: ProjectDetailModa
 
   // Extended project details
   const projectDetails: Record<string, any> = {
+    "Business Sales Performance Analytics":{
+      fullDescription:"Performed Exploratory Data Analysis (EDA) & KPI analysis Analyzed sales & profit by region, category, and segment Built RandomForestRegressor to predict profit Conducted customer segmentation using K-Means Forecasted future sales using Prophet.",
+      technologies:["Python","K-Meanst","RandomForestRegressor","Sklearn"],
+      timeline: "1 weak",
+      team: "1 project",
+      role: "Analytics"
+    },
       "Website for online marketing":{
       fullDescription:"Built on HTML, CSS, and JavaScript, this responsive website features a clean design and intuitive navigation.And also built its backend with Node.js integrate into mongoDB",
       technologies:["HTML","CSS","JavaScript","Node.Js","MongoDB"],
