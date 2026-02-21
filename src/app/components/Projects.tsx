@@ -10,8 +10,7 @@ import { ProjectDetailModal } from "./ProjectDetailModel";
 const projects = [
   {
     title: "Business Sales Performance Analytics",
-    description: "Performed Exploratory Data Analysis (EDA) & KPI analysis Analyzed sales & profit by region, category, and segment Built RandomForestRegressor to predict profit Conducted customer segmentation using K-Means
-     Forecasted future sales using Prophet.",
+    description: "Performed Exploratory Data Analysis (EDA) & KPI analysis Analyzed sales & profit by region, category, and segment Built RandomForestRegressor to predict profit Conducted customer segmentation using K-Means Forecasted future sales using Prophet.",
     image: "https://demandzen.com/wp-content/uploads/2025/12/Analytics-and-Sales-Performance_-Metrics-That-Drive-Revenue-Growth.jpg",
     tags: ["Python", "K-Meanst","RandomForestRegressor", "Sklearn"],
     category: "Analytics",
