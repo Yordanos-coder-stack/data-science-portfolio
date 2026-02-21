@@ -14,7 +14,7 @@ const projects = [
     image: "https://demandzen.com/wp-content/uploads/2025/12/Analytics-and-Sales-Performance_-Metrics-That-Drive-Revenue-Growth.jpg",
     tags: ["Python", "K-Meanst","RandomForestRegressor", "Sklearn"],
     category: "Analytics",
-    
+     metrics: { performance: "", responsiveness: "" }
   },
   {
     title: "Website for online marketing",
