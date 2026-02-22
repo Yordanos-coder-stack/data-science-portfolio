@@ -110,7 +110,7 @@ export function Hero() {
               className="flex gap-6 justify-center"
             >
               <motion.a
-                href="https://github.com"
+                href="https://github.com/Yordanos-coder-stack"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.2, rotate: 5 }}
@@ -120,7 +120,7 @@ export function Hero() {
                 <Github size={28} />
               </motion.a>
               <motion.a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/yordanos-fentahun-987466361/"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.2, rotate: -5 }}
@@ -130,7 +130,7 @@ export function Hero() {
                 <Linkedin size={28} />
               </motion.a>
               <motion.a
-                href="mailto:yordanos@example.com"
+                href="mailto:yordanosfentahundata@gmail.com"
                 whileHover={{ scale: 1.2, rotate: 5 }}
                 whileTap={{ scale: 0.9 }}
                 className="text-gray-400 hover:text-purple-400 transition-colors"
