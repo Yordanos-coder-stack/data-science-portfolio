@@ -8,7 +8,7 @@ const skillsData = {
   languages: [
     { name: "Python", level: 95, icon: "🐍" },
     { name: "R", level: 88, icon: "📊" },
-    { name: "SQL", level: 92, icon: "🗄️" },
+    { name: "SQL", level: 90, icon: "🗄️" },
     { name: "JavaScript", level: 75, icon: "⚡" },
     { name: "HTML&CSS", level: 88, icon: "🌐" },
     
