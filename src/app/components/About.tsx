@@ -45,7 +45,8 @@ export function About() {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-pink-600 mx-auto mb-6" />
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            I am a data science enthusiast with a strong interest in transforming data into actionable insights that support decision-making. I specialize in data analysis, visualization, and building predictive models using tools such as Python, SQL, and Power BI.
+            I am a data science enthusiast with a strong interest in transforming data into actionable insights that support decision-making.
+            I specialize in data analysis, visualization, and building predictive models using tools such as Python, SQL, and Power BI.
             I enjoy working on real-world problems and uncovering patterns in data that can drive business value. 
             My goal is to continuously develop my skills and contribute to data-driven solutions in areas such as business analytics, finance,health,agriculture and technology.
           </p>
