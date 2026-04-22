@@ -47,6 +47,8 @@ export function About() {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             I am a data science enthusiast with a strong interest in transforming data into actionable insights that support decision-making.
             I specialize in data analysis, visualization, and building predictive models using tools such as Python, SQL, and Power BI.
+          </p>
+           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             I enjoy working on real-world problems and uncovering patterns in data that can drive business value. 
             My goal is to continuously develop my skills and contribute to data-driven solutions in areas such as business analytics, 
             finance,health,agriculture and technology.
