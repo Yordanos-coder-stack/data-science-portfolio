@@ -49,9 +49,6 @@ export function About() {
             actionable insights that support real-world decision-making. I specialize
             in data analysis, machine learning, and visualization using Python, SQL,
             and Power BI.
-          </p>
-
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mt-6">
             I enjoy solving real-world problems by analyzing data, identifying patterns,
             and building predictive models. My interests span business analytics,
             finance, healthcare, agriculture, and technology, with a strong focus on
