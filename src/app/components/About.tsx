@@ -1,4 +1,4 @@
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { Code2, Database, Brain, TrendingUp } from "lucide-react";
 import { Card } from "./ui/card";
 
@@ -45,7 +45,7 @@ export function About() {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-pink-600 mx-auto mb-6" />
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            I'm a passionate data scientist with expertise in transforming raw data into strategic insights.
+            I am a passionate data scientist with expertise in transforming raw data into strategice insights.
             With a strong foundation in mathematics, statistics, and computer science, I specialize in
             building intelligent systems that drive business value.
           </p>
