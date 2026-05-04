@@ -12,7 +12,7 @@ const projects = [
     title: "Sentiment Analaysis",
     description: "Developed an end-to-end sentiment analysis system using Recurrent Neural Networks (LSTM) to classify movie reviews as positive or negative. The model was trained on the IMDB dataset and integrated into an interactive web application, allowing users to input custom text and receive real-time sentiment predictions.",
     image: "https://www.reputationx.com/wp-content/uploads/2026/02/sentiment-analysis-1-1.jpg",
-    tags: ["Python", "K-Means","RandomForestRegressor", "Sklearn"],
+    tags: ["Python","TensorFlow", "LSTM (RNN)", "Sklearn","Streamlit"],
     category: "Analytics",
      metrics: { performance: "", responsiveness: "" }
   },
@@ -20,7 +20,7 @@ const projects = [
     title: "Business Sales Performance Analytics",
     description: "Performed Exploratory Data Analysis (EDA) & KPI analysis Analyzed sales & profit by region, category, and segment Built RandomForestRegressor to predict profit Conducted customer segmentation using K-Means Forecasted future sales using Prophet.",
     image: "https://demandzen.com/wp-content/uploads/2025/12/Analytics-and-Sales-Performance_-Metrics-That-Drive-Revenue-Growth.jpg",
-    tags: ["Python","TensorFlow", "LSTM (RNN)", "Sklearn","Streamlit"],
+    tags: ["Python", "K-Means","RandomForestRegressor", "Sklearn"],
     category: "Analytics",
      metrics: { performance: "", responsiveness: "" }
   },
