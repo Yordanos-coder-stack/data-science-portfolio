@@ -9,12 +9,12 @@ const skillsData = {
     { name: "Python", level: 95, icon: "🐍" },
     { name: "R", level: 88, icon: "📊" },
     { name: "SQL", level: 90, icon: "🗄️" },
-    { name: "JavaScript", level: 75, icon: "⚡" },
-    { name: "HTML&CSS", level: 88, icon: "🌐" },
+    { name: "JavaScript", level: 70, icon: "⚡" },
+    { name: "HTML&CSS", level: 80, icon: "🌐" },
     
   ],
   frameworks: [
-    { name: "TensorFlow", level: 90, icon: "🧠" },
+    { name: "TensorFlow", level: 88, icon: "🧠" },
     { name: "PyTorch", level: 85, icon: "🔥" },
     { name: "Scikit-learn", level: 95, icon: "🎯" },
     { name: "Pandas", level: 98, icon: "🐼" },
