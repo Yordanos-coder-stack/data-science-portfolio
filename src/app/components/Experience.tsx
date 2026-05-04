@@ -27,7 +27,7 @@ const education = [
     period: "2023 - present",
     description: "Focused on machine learning, data analysis, and big data technologies. Completed coursework in statistical modeling, data mining, and deep learning.",
     gpa: "expected",
-    highlights: [" BLUE NILE MACHINE INTELLIGENCE LAB(BNMIL) community member(Mentor Team Leader "]
+    highlights: [" Blue Nile Mchine Intelligence Lab (BNMIL) community member(Mentor Team Leader "]
     
   }
 ];
