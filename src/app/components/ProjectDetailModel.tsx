@@ -33,6 +33,34 @@ export function ProjectDetailModal({ project, open, onClose }: ProjectDetailModa
 
   // Extended project details
   const projectDetails: Record<string, any> = {
+   "Sentiment Analaysis":{
+   "fullDescription": "Developed an end-to-end sentiment analysis system using Recurrent Neural Networks (LSTM) to classify movie reviews as positive or negative. The model was trained on the IMDB dataset and integrated into an interactive web application, allowing users to input custom text and receive real-time sentiment predictions.",
+    "challenges": [
+      "Handling text data preprocessing and sequence padding for variable-length inputs",
+      "Working with pre-tokenized IMDB dataset and adapting it for real-world text input",
+      "Ensuring consistency between training and deployment preprocessing (tokenization mismatch)",
+      "Deploying the trained model in a user-friendly web interface"
+    ],
+    
+    "solutions": [
+      "Implemented LSTM-based deep learning model for sequence classification",
+      "Reconstructed tokenizer from IMDB word index to support real-time text input",
+      "Applied padding and encoding techniques to standardize input sequences",
+      "Built and deployed an interactive web application using Streamlit",
+      "Ensured consistent preprocessing pipeline between training and deployment"
+      ],
+     "technologies": [ "Python", "TensorFlow", "LSTM (RNN)", "Streamlit", "NumPy", "Scikit-learn"],
+      "outcomes": [
+      "Achieved high accuracy in binary sentiment classification",
+      "Enabled real-time sentiment prediction through a web interface",
+      "Demonstrated practical deployment of deep learning models",
+      "Improved understanding of NLP pipelines and sequence modeling",
+       "Successfully integrated model with user input in production-like environment"
+        ],
+      "timeline": "2–3 weeks",
+      "team": "solo project",
+       "role": "Machine Learning Engineer / Data Scientist"
+        },
     "Business Sales Performance Analytics":{
       fullDescription:"Performed Exploratory Data Analysis (EDA) & KPI analysis Analyzed sales & profit by region, category, and segment Built RandomForestRegressor to predict profit Conducted customer segmentation using K-Means Forecasted future sales using Prophet.",
       technologies:["Python","K-Means","RandomForestRegressor","Sklearn"],
