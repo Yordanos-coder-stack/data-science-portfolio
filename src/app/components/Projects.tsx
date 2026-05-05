@@ -8,212 +8,188 @@ import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { ProjectDetailModal } from "./ProjectDetailModel";
 
 const projects = [
-  {
-    title: "Sentiment Analysis System",
-    description:
-      "Built an end-to-end LSTM-based sentiment analysis system trained on IMDB dataset with real-time prediction via web app.",
-    image:
-      "https://www.reputationx.com/wp-content/uploads/2026/02/sentiment-analysis-1-1.jpg",
-    tags: ["Python", "TensorFlow", "LSTM", "Scikit-learn", "Streamlit"],
-    category: "Machine Learning",
-    metrics: { accuracy: "—", latency: "—" },
-  },
-  {
-    title: "Business Sales Intelligence Dashboard",
-    description:
-      "Performed EDA, built forecasting models and clustering pipeline to analyze revenue, profit, and customer segments.",
-    image:
-      "https://demandzen.com/wp-content/uploads/2025/12/Analytics-and-Sales-Performance_-Metrics-That-Drive-Revenue-Growth.jpg",
-    tags: ["Python", "Pandas", "K-Means", "RandomForest"],
+    {
+    title: "Sentiment Analaysis",
+    description: "Developed an end-to-end sentiment analysis system using Recurrent Neural Networks (LSTM) to classify movie reviews as positive or negative. The model was trained on the IMDB dataset and integrated into an interactive web application, allowing users to input custom text and receive real-time sentiment predictions.",
+    image: "https://www.reputationx.com/wp-content/uploads/2026/02/sentiment-analysis-1-1.jpg",
+    tags: ["Python","TensorFlow", "LSTM (RNN)", "Sklearn","Streamlit"],
     category: "Analytics",
-    metrics: { insight: "High", automation: "Yes" },
+     metrics: { performance: "", responsiveness: "" }
   },
   {
-    title: "Marketing Website Platform",
-    description:
-      "Responsive marketing website with authentication, database integration, and modern UI system.",
-    image:
-      "https://continuinged.utah.edu/_resources/images/_d1/anc/featured-images/mktg231.jpg",
-    tags: ["HTML", "CSS", "JavaScript", "Node.js", "MongoDB"],
+    title: "Business Sales Performance Analytics",
+    description: "Performed Exploratory Data Analysis (EDA) & KPI analysis Analyzed sales & profit by region, category, and segment Built RandomForestRegressor to predict profit Conducted customer segmentation using K-Means Forecasted future sales using Prophet.",
+    image: "https://demandzen.com/wp-content/uploads/2025/12/Analytics-and-Sales-Performance_-Metrics-That-Drive-Revenue-Growth.jpg",
+    tags: ["Python", "K-Means","RandomForestRegressor", "Sklearn"],
+    category: "Analytics",
+     metrics: { performance: "", responsiveness: "" }
+  },
+  {
+    title: "Website for online marketing",
+    description: "Built on HTML, CSS, and JavaScript, this responsive website features a clean design and intuitive navigation. It includes a contact form and integrates with social media platforms to enhance online presence.",
+    image: "https://continuinged.utah.edu/_resources/images/_d1/anc/featured-images/mktg231.jpg",
+    tags: ["HTML", "CSS", "JavaScript","Node.Js","MongoDB"],
     category: "Web Development",
-    metrics: { performance: "95%", responsiveness: "+20%" },
+    metrics: { performance: "95%", responsiveness: "+20%" }
   },
   {
-    title: "Crop Yield Prediction Engine",
-    description:
-      "Ensemble ML model predicting agricultural yield with high accuracy, deployed via interactive interface.",
+    title: "Crop Yield Prediction",
+    description: "Built an ML model to predict crop yields with 95% accuracy using ensemble methods. Deployed on Gradio for interactive user interface.",
     image: "https://i0.wp.com/geopard.tech/wp-content/uploads/2022/06/63-min.jpg?w=1200&ssl=1",
-    tags: ["Python", "XGBoost", "Random Forest", "Scikit-learn", "Gradio"],
+    tags: ["Python", "Random Forest", "Sklearn","Gradio","XGBoost"],
     category: "Machine Learning",
-    metrics: { accuracy: "95%", improvement: "+20%" },
+    metrics: { accuracy: "95%", improvement: "+20%" }
   },
   {
-    title: "Stock Price Forecasting Model",
-    description:
-      "Time-series based predictive system using ensemble learning for financial forecasting.",
-    image:
-      "https://miro.medium.com/v2/resize:fit:2000/format:webp/0*rz_QvtXeqqHm5SIa.jpeg",
-    tags: ["Python", "XGBoost", "Random Forest", "Pandas"],
+    title: "Stock Price Prediction",
+    description: "Built an ML model to predict stock prices with 95% accuracy using ensemble methods. Deployed on Gradio for interactive user interface.",
+    image: "https://miro.medium.com/v2/resize:fit:2000/format:webp/0*rz_QvtXeqqHm5SIa.jpeg",
+    tags: ["Python", "Random Forest", "Sklearn","Gradio"],
     category: "Machine Learning",
-    metrics: { accuracy: "95%", improvement: "+23%" },
+    metrics: { accuracy: "95%", improvement: "+23%" }
   },
   {
-    title: "Customer Churn Prediction API",
-    description:
-      "Real-time churn prediction system deployed with scalable API architecture on cloud.",
-    image:
-      "https://images.unsplash.com/photo-1627398242454-45a1465c2479?auto=format&fit=crop&w=1080&q=80",
-    tags: ["Python", "XGBoost", "FastAPI", "PostgreSQL"],
+    title: "Customer Churn Prediction",
+    description: "Built an ML model to predict customer churn with 94% accuracy using ensemble methods. Deployed on AWS with real-time prediction API.",
+    image: "https://images.unsplash.com/photo-1627398242454-45a1465c2479?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXRhJTIwc2NpZW5jZSUyMGFuYWx5dGljcyUyMGNvZGV8ZW58MXx8fHwxNzcwNjE1MTU5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    tags: ["Python", "XGBoost", "Sklearn"],
     category: "Machine Learning",
-    metrics: { accuracy: "94%", recall: "92%" },
+    metrics: { accuracy: "94%", improvement: "+23%" }
   },
+ 
   {
-    title: "Computer Vision Detection System",
-    description:
-      "YOLO-based object detection system for industrial quality control with real-time performance.",
-    image:
-      "https://images.unsplash.com/photo-1762279389083-abf71f22d338?auto=format&fit=crop&w=1080&q=80",
-    tags: ["OpenCV", "TensorFlow", "YOLOv8"],
+    title: "Computer Vision Object Detection",
+    description: "Implemented YOLOv8 for real-time object detection in manufacturing quality control, reducing defect rates by 40%.",
+    image: "https://images.unsplash.com/photo-1762279389083-abf71f22d338?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYWNoaW5lJTIwbGVhcm5pbmclMjB2aXN1YWxpemF0aW9ufGVufDF8fHx8MTc3MDUzODI3OXww&ixlib=rb-4.1.0&q=80&w=1080",
+    tags: [, "OpenCV", "TensorFlow",],
     category: "Computer Vision",
-    metrics: { accuracy: "96%", fps: "30" },
+    metrics: { accuracy: "96%", fps: "30" }
   },
   {
     title: "Fraud Detection System",
-    description:
-      "Anomaly detection system combining isolation forests and autoencoders for fraud prevention.",
-    image:
-      "https://images.unsplash.com/photo-1644088379091-d574269d422f?auto=format&fit=crop&w=1080&q=80",
+    description: "Developed an anomaly detection system using isolation forests and autoencoders to identify fraudulent transactions in real-time.",
+    image: "https://images.unsplash.com/photo-1644088379091-d574269d422f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMHRlY2hub2xvZ3klMjBuZXR3b3JrfGVufDF8fHx8MTc3MDU2MjUwMnww&ixlib=rb-4.1.0&q=80&w=1080",
     tags: ["Scikit-learn", "TensorFlow", "PostgreSQL"],
     category: "Machine Learning",
-    metrics: { precision: "89%", recall: "92%" },
-  },
+    metrics: { precision: "89%", recall: "92%" }
+  }
 ];
 
-const categories = [
-  "All",
-  "Machine Learning",
-  "Deep Learning",
-  "Computer Vision",
-  "Analytics",
-];
+const categories = ["All", "Machine Learning", "Deep Learning", "Computer Vision", "Analytics"];
+
 
 export function Projects() {
   const [selectedCategory, setSelectedCategory] = useState("All");
-  const [selectedProject, setSelectedProject] = useState<any | null>(null);
+  const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const filteredProjects =
-    selectedCategory === "All"
-      ? projects
-      : projects.filter((p) => p.category === selectedCategory);
+  const filteredProjects = selectedCategory === "All" 
+    ? projects 
+    : projects.filter(p => p.category === selectedCategory);
 
-  const handleViewDetails = (project: any) => {
+  const handleViewDetails = (project: typeof projects[0]) => {
     setSelectedProject(project);
     setIsModalOpen(true);
   };
 
   return (
-    <section id="projects" className="py-24 bg-white relative">
-      <div className="max-w-7xl mx-auto px-6">
-
-        {/* Header */}
+    <section id="projects" className="py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-14"
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900">
+          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
             Featured Projects
           </h2>
-          <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
-            Real-world machine learning systems, analytics pipelines, and AI applications.
+          <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-pink-600 mx-auto mb-6" />
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Showcasing real-world applications of machine learning and data science
           </p>
         </motion.div>
 
-        {/* Filter Pills (modern UX upgrade) */}
-        <div className="flex flex-wrap justify-center gap-2 mb-12">
-          {categories.map((category) => {
-            const active = selectedCategory === category;
-
-            return (
-              <button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
-                className={`px-4 py-2 rounded-full text-sm transition border ${
-                  active
-                    ? "bg-purple-600 text-white border-purple-600 shadow-md"
-                    : "bg-white text-gray-700 hover:border-purple-400"
-                }`}
-              >
-                {category}
-              </button>
-            );
-          })}
-        </div>
+        {/* Category Filter */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="flex flex-wrap justify-center gap-3 mb-12"
+        >
+          {categories.map((category) => (
+            <Button
+              key={category}
+              variant={selectedCategory === category ? "default" : "outline"}
+              onClick={() => setSelectedCategory(category)}
+              className={selectedCategory === category 
+                ? "bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700" 
+                : "hover:border-purple-400"}
+            >
+              {category}
+            </Button>
+          ))}
+        </motion.div>
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project, index) => (
             <motion.div
-              key={project.title}
-              initial={{ opacity: 0, y: 25 }}
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.05 }}
-              whileHover={{ y: -6 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              whileHover={{ y: -8 }}
               className="group"
             >
-              <Card className="overflow-hidden h-full flex flex-col border hover:shadow-2xl transition-all duration-300">
-
-                {/* Image */}
-                <div className="relative h-48 overflow-hidden">
+              <Card className="overflow-hidden h-full flex flex-col hover:shadow-2xl transition-shadow duration-300 border-2 hover:border-purple-200">
+                <div className="relative h-48 overflow-hidden bg-gray-100">
                   <ImageWithFallback
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
-
-                  {/* Overlay actions */}
-                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition" />
-
-                  <div className="absolute bottom-3 right-3 flex gap-2 opacity-0 group-hover:opacity-100 transition">
-                    <Button size="sm" variant="secondary">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute bottom-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <Button size="sm" variant="secondary" className="bg-white/90 hover:bg-white">
                       <Github size={16} />
                     </Button>
-                    <Button size="sm" variant="secondary">
+                    <Button size="sm" variant="secondary" className="bg-white/90 hover:bg-white">
                       <ExternalLink size={16} />
                     </Button>
                   </div>
                 </div>
 
-                {/* Content */}
-                <div className="p-6 flex flex-col flex-1">
+                <div className="p-6 flex-1 flex flex-col">
+                  <div className="flex items-center justify-between mb-3">
+                    <Badge className="bg-purple-100 text-purple-700 hover:bg-purple-200">
+                      {project.category}
+                    </Badge>
+                  </div>
 
-                  <Badge className="w-fit mb-3 bg-purple-100 text-purple-700">
-                    {project.category}
-                  </Badge>
-
-                  <h3 className="text-lg font-bold text-gray-900 group-hover:text-purple-600 transition">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">
                     {project.title}
                   </h3>
 
-                  <p className="text-gray-600 text-sm mt-2 flex-1">
+                  <p className="text-gray-600 mb-4 leading-relaxed flex-1">
                     {project.description}
                   </p>
 
                   {/* Metrics */}
-                  <div className="grid grid-cols-2 gap-2 mt-4 text-center text-sm bg-gray-50 p-3 rounded-lg">
-                    {Object.entries(project.metrics).map(([k, v]) => (
-                      <div key={k}>
-                        <div className="font-bold text-purple-600">{v}</div>
-                        <div className="text-gray-500 capitalize">{k}</div>
+                  <div className="grid grid-cols-2 gap-3 mb-4 p-3 bg-gray-50 rounded-lg">
+                    {Object.entries(project.metrics).map(([key, value]) => (
+                      <div key={key} className="text-center">
+                        <div className="text-lg font-bold text-purple-600">{value}</div>
+                        <div className="text-xs text-gray-500 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</div>
                       </div>
                     ))}
                   </div>
 
                   {/* Tags */}
-                  <div className="flex flex-wrap gap-2 mt-4">
+                  <div className="flex flex-wrap gap-2 mb-4">
                     {project.tags.map((tag) => (
                       <Badge key={tag} variant="outline" className="text-xs">
                         {tag}
@@ -221,14 +197,13 @@ export function Projects() {
                     ))}
                   </div>
 
-                  {/* CTA */}
-                  <Button
-                    variant="ghost"
-                    className="mt-4 justify-between hover:bg-purple-50"
+                  <Button 
+                    variant="ghost" 
+                    className="w-full group/btn hover:bg-purple-50 hover:text-purple-600"
                     onClick={() => handleViewDetails(project)}
                   >
-                    View Case Study
-                    <ChevronRight className="w-4 h-4" />
+                    View Details
+                    <ChevronRight className="ml-2 group-hover/btn:translate-x-1 transition-transform" size={16} />
                   </Button>
                 </div>
               </Card>
@@ -237,10 +212,10 @@ export function Projects() {
         </div>
       </div>
 
-      <ProjectDetailModal
+      <ProjectDetailModal 
         project={selectedProject}
-        open={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
+        open={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
       />
     </section>
   );
