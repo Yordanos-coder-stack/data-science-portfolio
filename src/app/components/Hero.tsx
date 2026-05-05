@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Github, Linkedin, Mail, Download } from "lucide-react";
 import { Button } from "./ui/button";
-#import { TypeAnimation } from "react-type-animation";
+import { TypeAnimation } from "react-type-animation";
 
 export function Hero() {
   return (
