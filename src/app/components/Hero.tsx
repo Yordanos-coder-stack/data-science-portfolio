@@ -78,8 +78,9 @@ export function Hero() {
           transition={{ delay: 0.6 }}
           className="text-lg text-gray-300 mt-6 max-w-2xl mx-auto"
         >
-          Transforming complex data into actionable insights using Machine Learning,
-          Deep Learning, and Data Analytics.
+          Transforming complex data into actionable insights through advanced analytics,
+          machine learning,deep learning and compelling visualizations. Let's unlock the power of your data.
+        
         </motion.p>
 
         {/* Buttons */}
