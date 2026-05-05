@@ -13,7 +13,7 @@ const projects = [
     description: "Developed an end-to-end sentiment analysis system using Recurrent Neural Networks (LSTM) to classify movie reviews as positive or negative. The model was trained on the IMDB dataset and integrated into an interactive web application, allowing users to input custom text and receive real-time sentiment predictions.",
     image: "https://www.reputationx.com/wp-content/uploads/2026/02/sentiment-analysis-1-1.jpg",
     tags: ["Python","TensorFlow", "LSTM (RNN)", "Sklearn","Streamlit"],
-    category: "Analytics",
+    category: "Machine Learning",
      metrics: { performance: "", responsiveness: "" }
   },
   {
