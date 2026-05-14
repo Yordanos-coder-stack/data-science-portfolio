@@ -19,7 +19,7 @@ const projects = [
   {
     title: "Business Sales Performance Analytics",
     description: "Performed Exploratory Data Analysis (EDA) & KPI analysis Analyzed sales & profit by region, category, and segment Built RandomForestRegressor to predict profit Conducted customer segmentation using K-Means Forecasted future sales using Prophet.",
-    image: "https://demandzen.com/wp-content/uploads/2025/12/Analytics-and-Sales-Performance_-Metrics-That-Drive-Revenue-Growth.jpg",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxc6e-fy6qdFQr8-7xXnfA6QrK0-Q2J3oMBQ&s",
     tags: ["Python", "K-Means","RandomForestRegressor", "Sklearn"],
     category: "Analytics",
      metrics: { performance: "", responsiveness: "" }
