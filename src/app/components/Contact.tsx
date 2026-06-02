@@ -61,25 +61,25 @@ export function Contact() {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-white">
+    <section id="contact" className="py-16 sm:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
             Get In Touch
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-pink-600 mx-auto mb-6" />
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-base sm:text-xl text-gray-600 max-w-3xl mx-auto">
             Have a project in mind or want to collaborate? Let's connect and discuss how we can work together!
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-12">
           {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -87,8 +87,8 @@ export function Contact() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <Card className="p-8 hover:shadow-xl transition-shadow duration-300">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+            <Card className="p-5 sm:p-8 hover:shadow-xl transition-shadow duration-300">
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6">
                 Send Me a Message
               </h3>
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -176,7 +176,7 @@ export function Contact() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6">
                 Contact Information
               </h3>
               <div className="space-y-4">
@@ -191,14 +191,14 @@ export function Contact() {
                     whileHover={{ x: 8 }}
                     className="block"
                   >
-                    <Card className="p-6 hover:shadow-xl transition-shadow duration-300 border-2 hover:border-purple-200 cursor-pointer">
-                      <div className="flex items-center gap-4">
+                    <Card className="p-4 sm:p-6 hover:shadow-xl transition-shadow duration-300 border-2 hover:border-purple-200 cursor-pointer">
+                      <div className="flex items-start sm:items-center gap-3 sm:gap-4">
                         <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${info.color} flex items-center justify-center flex-shrink-0`}>
                           <info.icon className="text-white" size={24} />
                         </div>
-                        <div>
+                        <div className="min-w-0">
                           <p className="text-sm text-gray-600">{info.title}</p>
-                          <p className="font-medium text-gray-900">{info.value}</p>
+                          <p className="font-medium text-gray-900 break-all">{info.value}</p>
                         </div>
                       </div>
                     </Card>
@@ -214,7 +214,7 @@ export function Contact() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6">
                 Follow Me
               </h3>
               <div className="flex gap-4">
@@ -242,8 +242,8 @@ export function Contact() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              <Card className="p-8 bg-gradient-to-br from-purple-600 to-pink-600 text-white">
-                <h3 className="text-2xl font-bold mb-4">
+              <Card className="p-5 sm:p-8 bg-gradient-to-br from-purple-600 to-pink-600 text-white">
+                <h3 className="text-xl sm:text-2xl font-bold mb-4">
                   Ready to Start a Project?
                 </h3>
                 <p className="mb-6 text-purple-100">
