@@ -279,7 +279,7 @@ export function ProjectDetailModal({ project, open, onClose }: ProjectDetailModa
 
   return (
     <Dialog open={open} onOpenChange={onClose}>
-      <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+      <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto px-4 sm:px-6">
         <DialogHeader>
           <DialogTitle className="text-2xl">Project Details</DialogTitle>
         </DialogHeader>
@@ -290,7 +290,7 @@ export function ProjectDetailModal({ project, open, onClose }: ProjectDetailModa
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
-            className="relative h-64 rounded-lg overflow-hidden"
+            className="relative h-48 sm:h-64 rounded-lg overflow-hidden"
           >
             <ImageWithFallback
               src={project.image}
@@ -298,14 +298,14 @@ export function ProjectDetailModal({ project, open, onClose }: ProjectDetailModa
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end">
-              <div className="p-6 w-full">
+              <div className="p-4 sm:p-6 w-full">
                 <Badge className="mb-3 bg-purple-600 text-white">
                   {project.category}
                 </Badge>
-                <h2 className="text-3xl font-bold text-white mb-2">
+                <h2 className="text-2xl sm:text-3xl font-bold text-white mb-2">
                   {project.title}
                 </h2>
-                <div className="flex gap-4 text-sm text-gray-200">
+                <div className="flex flex-wrap gap-3 sm:gap-4 text-sm text-gray-200">
                   {details.timeline && (
                     <div className="flex items-center gap-1">
                       <Calendar size={16} />
@@ -334,7 +334,7 @@ export function ProjectDetailModal({ project, open, onClose }: ProjectDetailModa
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.1 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-4"
+            className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4"
           >
             {Object.entries(project.metrics).map(([key, value], index) => (
               <div
@@ -456,7 +456,7 @@ export function ProjectDetailModal({ project, open, onClose }: ProjectDetailModa
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.7 }}
-            className="flex gap-3 pt-4 border-t"
+            className="flex flex-col sm:flex-row gap-3 pt-4 border-t"
           >
             <Button
               className="flex-1 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700"
