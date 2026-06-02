@@ -31,17 +31,17 @@ export function Hero() {
         ))}
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 py-20 text-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 py-16 sm:py-20 text-center">
 
         {/* Avatar */}
         <motion.div
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ delay: 0.2, type: "spring" }}
-          className="mb-6"
+          className="mb-5 sm:mb-6"
         >
-          <div className="w-28 h-28 mx-auto rounded-full bg-gradient-to-br from-purple-400 to-pink-600 p-1">
-            <div className="w-full h-full bg-slate-900 rounded-full flex items-center justify-center text-5xl">
+          <div className="w-24 h-24 sm:w-28 sm:h-28 mx-auto rounded-full bg-gradient-to-br from-purple-400 to-pink-600 p-1">
+            <div className="w-full h-full bg-slate-900 rounded-full flex items-center justify-center text-4xl sm:text-5xl">
               👩‍💻
             </div>
           </div>
@@ -51,7 +51,7 @@ export function Hero() {
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-5xl sm:text-7xl font-bold text-white mb-4"
+          className="text-4xl sm:text-7xl font-bold text-white mb-4"
         >
           Yordanos Fentahun
         </motion.h1>
@@ -68,7 +68,7 @@ export function Hero() {
           ]}
           speed={50}
           repeat={Infinity}
-          className="text-2xl sm:text-4xl bg-gradient-to-r from-purple-400 via-pink-500 to-purple-400 bg-clip-text text-transparent"
+          className="text-xl sm:text-4xl bg-gradient-to-r from-purple-400 via-pink-500 to-purple-400 bg-clip-text text-transparent"
         />
 
         {/* Description */}
@@ -76,7 +76,7 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6 }}
-          className="text-lg text-gray-300 mt-6 max-w-2xl mx-auto"
+          className="text-base sm:text-lg text-gray-300 mt-5 sm:mt-6 max-w-2xl mx-auto"
         >
           Transforming complex data into actionable insights through advanced analytics,
           machine learning,deep learning and compelling visualizations. Let's unlock the power of your data.
@@ -85,13 +85,13 @@ export function Hero() {
 
         {/* Buttons */}
         <motion.div
-          className="flex gap-4 justify-center mt-8 flex-wrap"
+          className="flex gap-3 sm:gap-4 justify-center mt-7 sm:mt-8 flex-wrap"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1 }}
         >
           <Button
-            className="bg-gradient-to-r from-purple-600 to-pink-600 text-white"
+            className="bg-gradient-to-r from-purple-600 to-pink-600 text-white w-full sm:w-auto"
             onClick={() =>
               document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })
             }
@@ -99,7 +99,7 @@ export function Hero() {
             View Projects <ArrowRight className="ml-2" />
           </Button>
 
-          <Button variant="outline" asChild>
+          <Button variant="outline" asChild className="w-full sm:w-auto">
             <a href="/resume.pdf" download>
               <Download className="mr-2" />
               Resume
@@ -108,7 +108,7 @@ export function Hero() {
         </motion.div>
 
         {/* Socials */}
-        <div className="flex justify-center gap-6 mt-8">
+        <div className="flex justify-center gap-5 sm:gap-6 mt-7 sm:mt-8">
           <a href="https://github.com/Yordanos-coder-stack" target="_blank">
             <Github className="text-gray-400 hover:text-purple-400" />
           </a>
