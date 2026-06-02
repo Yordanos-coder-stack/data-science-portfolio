@@ -57,30 +57,30 @@ export function Skills() {
   const [activeTab, setActiveTab] = useState("languages");
 
   return (
-    <section id="skills" className="py-20 bg-gradient-to-br from-slate-50 to-purple-50">
+    <section id="skills" className="py-16 sm:py-20 bg-gradient-to-br from-slate-50 to-purple-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
             Technical Skills
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-pink-600 mx-auto mb-6" />
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-base sm:text-xl text-gray-600 max-w-3xl mx-auto">
             A comprehensive toolkit for turning data into actionable intelligence
           </p>
         </motion.div>
 
         <Tabs defaultValue="languages" className="w-full" onValueChange={setActiveTab}>
-          <TabsList className="grid w-full max-w-2xl mx-auto grid-cols-4 mb-12">
-            <TabsTrigger value="languages">Languages</TabsTrigger>
-            <TabsTrigger value="frameworks">Frameworks</TabsTrigger>
-            <TabsTrigger value="tools">Tools</TabsTrigger>
-            <TabsTrigger value="specializations">Expertise</TabsTrigger>
+          <TabsList className="grid h-auto w-full max-w-2xl mx-auto grid-cols-2 sm:grid-cols-4 mb-8 sm:mb-12 gap-2 bg-transparent p-0">
+            <TabsTrigger value="languages" className="h-10 sm:h-9 border bg-muted/60">Languages</TabsTrigger>
+            <TabsTrigger value="frameworks" className="h-10 sm:h-9 border bg-muted/60">Frameworks</TabsTrigger>
+            <TabsTrigger value="tools" className="h-10 sm:h-9 border bg-muted/60">Tools</TabsTrigger>
+            <TabsTrigger value="specializations" className="h-10 sm:h-9 border bg-muted/60">Expertise</TabsTrigger>
           </TabsList>
 
           <TabsContent value="languages" className="mt-0">
@@ -178,7 +178,7 @@ export function Skills() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <Card className="p-8 md:p-12">
+              <Card className="p-6 sm:p-8 md:p-12">
                 <div className="flex flex-wrap gap-3 justify-center">
                   {skillsData.specializations.map((spec, index) => (
                     <motion.div
@@ -190,7 +190,7 @@ export function Skills() {
                     >
                       <Badge
                         variant="secondary"
-                        className="px-6 py-3 text-base bg-gradient-to-r from-purple-100 to-pink-100 hover:from-purple-200 hover:to-pink-200 text-purple-900 cursor-pointer"
+                        className="px-4 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-base bg-gradient-to-r from-purple-100 to-pink-100 hover:from-purple-200 hover:to-pink-200 text-purple-900 cursor-pointer"
                       >
                         {spec}
                       </Badge>
