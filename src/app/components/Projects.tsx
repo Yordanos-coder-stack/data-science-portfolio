@@ -93,20 +93,20 @@ export function Projects() {
   };
 
   return (
-    <section id="projects" className="py-20 bg-white">
+    <section id="projects" className="py-16 sm:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
             Featured Projects
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-pink-600 mx-auto mb-6" />
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-base sm:text-xl text-gray-600 max-w-3xl mx-auto">
             Showcasing real-world applications of machine learning and data science
           </p>
         </motion.div>
@@ -117,7 +117,7 @@ export function Projects() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="flex flex-wrap justify-center gap-3 mb-12"
+          className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-10 sm:mb-12"
         >
           {categories.map((category) => (
             <Button
@@ -163,7 +163,7 @@ export function Projects() {
                   </div>
                 </div>
 
-                <div className="p-6 flex-1 flex flex-col">
+                <div className="p-5 sm:p-6 flex-1 flex flex-col">
                   <div className="flex items-center justify-between mb-3">
                     <Badge className="bg-purple-100 text-purple-700 hover:bg-purple-200">
                       {project.category}
