@@ -226,7 +226,7 @@ export function Projects() {
               onClick={() => setVisibleCount((prev) => prev + projectsPerLoad)}
               className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white"
             >
-              Load More Projects
+              More Projects
             </Button>
           ) : (
             filteredProjects.length > projectsPerLoad && (
