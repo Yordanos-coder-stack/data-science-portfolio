@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
@@ -82,15 +82,23 @@ export function Projects() {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [visibleCount, setVisibleCount] = useState(6);
+  const projectsPerLoad = 6;
 
   const filteredProjects = selectedCategory === "All" 
     ? projects 
     : projects.filter(p => p.category === selectedCategory);
+  const visibleProjects = filteredProjects.slice(0, visibleCount);
+  const canLoadMore = visibleCount < filteredProjects.length;
 
   const handleViewDetails = (project: typeof projects[0]) => {
     setSelectedProject(project);
     setIsModalOpen(true);
   };
+
+  useEffect(() => {
+    setVisibleCount(projectsPerLoad);
+  }, [selectedCategory]);
 
   return (
     <section id="projects" className="py-16 sm:py-20 bg-white">
@@ -135,7 +143,7 @@ export function Projects() {
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProjects.map((project, index) => (
+          {visibleProjects.map((project, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
@@ -209,6 +217,31 @@ export function Projects() {
               </Card>
             </motion.div>
           ))}
+        </div>
+
+        {/* Pagination-like controls for growing project lists */}
+        <div className="mt-10 flex flex-col sm:flex-row justify-center items-center gap-3">
+          {canLoadMore ? (
+            <Button
+              onClick={() => setVisibleCount((prev) => prev + projectsPerLoad)}
+              className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white"
+            >
+              Load More Projects
+            </Button>
+          ) : (
+            filteredProjects.length > projectsPerLoad && (
+              <Button
+                variant="outline"
+                onClick={() => setVisibleCount(projectsPerLoad)}
+                className="hover:border-purple-400"
+              >
+                Show Less
+              </Button>
+            )
+          )}
+          <p className="text-sm text-gray-500">
+            Showing {Math.min(visibleCount, filteredProjects.length)} of {filteredProjects.length}
+          </p>
         </div>
       </div>
 
