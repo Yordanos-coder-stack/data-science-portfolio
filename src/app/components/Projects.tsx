@@ -61,7 +61,7 @@ const projects = [
     title: "Computer Vision Object Detection",
     description: "Implemented YOLOv8 for real-time object detection in manufacturing quality control, reducing defect rates by 40%.",
     image: "https://images.unsplash.com/photo-1762279389083-abf71f22d338?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYWNoaW5lJTIwbGVhcm5pbmclMjB2aXN1YWxpemF0aW9ufGVufDF8fHx8MTc3MDUzODI3OXww&ixlib=rb-4.1.0&q=80&w=1080",
-    tags: [, "OpenCV", "TensorFlow",],
+    tags: ["OpenCV", "TensorFlow"],
     category: "Computer Vision",
     metrics: { accuracy: "96%", fps: "30" }
   },
