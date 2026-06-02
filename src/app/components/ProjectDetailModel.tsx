@@ -12,6 +12,8 @@ interface Project {
   tags: string[];
   category: string;
   metrics: Record<string, string>;
+  githubUrl?: string;
+  liveDemoUrl?: string;
   fullDescription?: string;
   challenges?: string[];
   solutions?: string[];
@@ -30,6 +32,8 @@ interface ProjectDetailModalProps {
 
 export function ProjectDetailModal({ project, open, onClose }: ProjectDetailModalProps) {
   if (!project) return null;
+  const fallbackGithub = "https://github.com/Yordanos-coder-stack";
+  const fallbackDemo = "https://data-science-portfolio-gules.vercel.app/";
 
   // Extended project details
   const projectDetails: Record<string, any> = {
@@ -460,7 +464,7 @@ export function ProjectDetailModal({ project, open, onClose }: ProjectDetailModa
           >
             <Button
               className="flex-1 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700"
-              onClick={() => window.open("https://github.com/Yordanos-coder-stack", "_blank")}
+              onClick={() => window.open(project.githubUrl ?? fallbackGithub, "_blank")}
             >
               <Github className="mr-2" size={18} />
               View Code
@@ -468,7 +472,7 @@ export function ProjectDetailModal({ project, open, onClose }: ProjectDetailModa
             <Button
               variant="outline"
               className="flex-1 border-purple-600 text-purple-600 hover:bg-purple-50"
-              onClick={() => window.open("https://github.com/Yordanos-coder-stack", "_blank")}
+              onClick={() => window.open(project.liveDemoUrl ?? fallbackDemo, "_blank")}
             >
               <ExternalLink className="mr-2" size={18} />
               Live Demo
