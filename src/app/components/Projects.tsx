@@ -82,12 +82,31 @@ export function Projects() {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [sortBy, setSortBy] = useState("featured");
   const [currentPage, setCurrentPage] = useState(1);
   const projectsPerPage = 6;
 
-  const filteredProjects = selectedCategory === "All" 
-    ? projects 
-    : projects.filter(p => p.category === selectedCategory);
+  const filteredProjects = projects
+    .filter((project) => selectedCategory === "All" || project.category === selectedCategory)
+    .filter((project) => {
+      const query = searchTerm.trim().toLowerCase();
+      if (!query) return true;
+
+      const titleMatch = project.title.toLowerCase().includes(query);
+      const categoryMatch = project.category.toLowerCase().includes(query);
+      const descriptionMatch = project.description.toLowerCase().includes(query);
+      const tagMatch = project.tags.filter(Boolean).some((tag) => String(tag).toLowerCase().includes(query));
+
+      return titleMatch || categoryMatch || descriptionMatch || tagMatch;
+    })
+    .sort((a, b) => {
+      if (sortBy === "title-asc") return a.title.localeCompare(b.title);
+      if (sortBy === "title-desc") return b.title.localeCompare(a.title);
+      if (sortBy === "category") return a.category.localeCompare(b.category);
+      return 0;
+    });
+
   const totalPages = Math.max(1, Math.ceil(filteredProjects.length / projectsPerPage));
   const startIndex = (currentPage - 1) * projectsPerPage;
   const endIndex = startIndex + projectsPerPage;
@@ -100,7 +119,7 @@ export function Projects() {
 
   useEffect(() => {
     setCurrentPage(1);
-  }, [selectedCategory]);
+  }, [selectedCategory, searchTerm, sortBy]);
 
   return (
     <section id="projects" className="py-16 sm:py-20 bg-white">
@@ -143,8 +162,77 @@ export function Projects() {
           ))}
         </motion.div>
 
+        {/* Search + Sort controls */}
+        <div className="mb-8 sm:mb-10 grid grid-cols-1 md:grid-cols-3 gap-3">
+          <input
+            type="text"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            placeholder="Search by title, tag, or keyword..."
+            className="md:col-span-2 h-10 px-3 rounded-md border border-gray-300 bg-white text-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
+          />
+          <select
+            value={sortBy}
+            onChange={(e) => setSortBy(e.target.value)}
+            className="h-10 px-3 rounded-md border border-gray-300 bg-white text-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
+          >
+            <option value="featured">Sort: Featured</option>
+            <option value="title-asc">Sort: Title A-Z</option>
+            <option value="title-desc">Sort: Title Z-A</option>
+            <option value="category">Sort: Category</option>
+          </select>
+        </div>
+
+        {/* Mobile swipe carousel */}
+        <div className="md:hidden -mx-4 px-4 overflow-x-auto pb-2 snap-x snap-mandatory">
+          <div className="flex gap-4">
+            {visibleProjects.map((project, index) => (
+              <motion.div
+                key={`mobile-${index}`}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.06 }}
+                className="min-w-[88%] snap-start"
+              >
+                <Card className="overflow-hidden h-full flex flex-col border-2 hover:border-purple-200">
+                  <div className="relative h-44 overflow-hidden bg-gray-100">
+                    <ImageWithFallback
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="p-5 flex-1 flex flex-col">
+                    <Badge className="w-fit bg-purple-100 text-purple-700 hover:bg-purple-200 mb-3">
+                      {project.category}
+                    </Badge>
+                    <h3 className="text-lg font-bold text-gray-900 mb-2">{project.title}</h3>
+                    <p className="text-sm text-gray-600 mb-3 leading-relaxed line-clamp-3">{project.description}</p>
+                    <div className="flex flex-wrap gap-2 mb-3">
+                      {project.tags.filter(Boolean).slice(0, 4).map((tag) => (
+                        <Badge key={`${project.title}-${tag}`} variant="outline" className="text-xs">
+                          {tag}
+                        </Badge>
+                      ))}
+                    </div>
+                    <Button
+                      variant="ghost"
+                      className="w-full mt-auto group/btn hover:bg-purple-50 hover:text-purple-600"
+                      onClick={() => handleViewDetails(project)}
+                    >
+                      View Details
+                      <ChevronRight className="ml-2 group-hover/btn:translate-x-1 transition-transform" size={16} />
+                    </Button>
+                  </div>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {visibleProjects.map((project, index) => (
             <motion.div
               key={index}
@@ -184,7 +272,7 @@ export function Projects() {
                     {project.title}
                   </h3>
 
-                  <p className="text-gray-600 mb-4 leading-relaxed flex-1">
+                  <p className="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed flex-1 line-clamp-4">
                     {project.description}
                   </p>
 
@@ -200,8 +288,8 @@ export function Projects() {
 
                   {/* Tags */}
                   <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tags.map((tag) => (
-                      <Badge key={tag} variant="outline" className="text-xs">
+                    {project.tags.filter(Boolean).slice(0, 5).map((tag) => (
+                      <Badge key={`${project.title}-${tag}`} variant="outline" className="text-xs">
                         {tag}
                       </Badge>
                     ))}
@@ -264,6 +352,12 @@ export function Projects() {
             {Math.min(endIndex, filteredProjects.length)} of {filteredProjects.length}
           </p>
         </div>
+
+        {filteredProjects.length === 0 && (
+          <p className="text-center text-gray-500 mt-8">
+            No projects found. Try a different search or category.
+          </p>
+        )}
       </div>
 
       <ProjectDetailModal 
