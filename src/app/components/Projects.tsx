@@ -82,14 +82,16 @@ export function Projects() {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [visibleCount, setVisibleCount] = useState(6);
-  const projectsPerLoad = 6;
+  const [currentPage, setCurrentPage] = useState(1);
+  const projectsPerPage = 6;
 
   const filteredProjects = selectedCategory === "All" 
     ? projects 
     : projects.filter(p => p.category === selectedCategory);
-  const visibleProjects = filteredProjects.slice(0, visibleCount);
-  const canLoadMore = visibleCount < filteredProjects.length;
+  const totalPages = Math.max(1, Math.ceil(filteredProjects.length / projectsPerPage));
+  const startIndex = (currentPage - 1) * projectsPerPage;
+  const endIndex = startIndex + projectsPerPage;
+  const visibleProjects = filteredProjects.slice(startIndex, endIndex);
 
   const handleViewDetails = (project: typeof projects[0]) => {
     setSelectedProject(project);
@@ -97,7 +99,7 @@ export function Projects() {
   };
 
   useEffect(() => {
-    setVisibleCount(projectsPerLoad);
+    setCurrentPage(1);
   }, [selectedCategory]);
 
   return (
@@ -219,28 +221,47 @@ export function Projects() {
           ))}
         </div>
 
-        {/* Pagination-like controls for growing project lists */}
+        {/* Pagination controls for growing project lists */}
         <div className="mt-10 flex flex-col sm:flex-row justify-center items-center gap-3">
-          {canLoadMore ? (
-            <Button
-              onClick={() => setVisibleCount((prev) => prev + projectsPerLoad)}
-              className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white"
-            >
-              More Projects
-            </Button>
-          ) : (
-            filteredProjects.length > projectsPerLoad && (
+          {totalPages > 1 && (
+            <div className="flex items-center gap-2 flex-wrap justify-center">
               <Button
                 variant="outline"
-                onClick={() => setVisibleCount(projectsPerLoad)}
-                className="hover:border-purple-400"
+                onClick={() => setCurrentPage((prev) => Math.max(1, prev - 1))}
+                disabled={currentPage === 1}
+                className="hover:border-purple-400 disabled:opacity-50"
               >
-                Show Less
+                Previous
               </Button>
-            )
+
+              {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                <Button
+                  key={page}
+                  variant={page === currentPage ? "default" : "outline"}
+                  onClick={() => setCurrentPage(page)}
+                  className={
+                    page === currentPage
+                      ? "bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 min-w-10"
+                      : "hover:border-purple-400 min-w-10"
+                  }
+                >
+                  {page}
+                </Button>
+              ))}
+
+              <Button
+                variant="outline"
+                onClick={() => setCurrentPage((prev) => Math.min(totalPages, prev + 1))}
+                disabled={currentPage === totalPages}
+                className="hover:border-purple-400 disabled:opacity-50"
+              >
+                Next
+              </Button>
+            </div>
           )}
           <p className="text-sm text-gray-500">
-            Showing {Math.min(visibleCount, filteredProjects.length)} of {filteredProjects.length}
+            Showing {filteredProjects.length === 0 ? 0 : startIndex + 1}-
+            {Math.min(endIndex, filteredProjects.length)} of {filteredProjects.length}
           </p>
         </div>
       </div>
