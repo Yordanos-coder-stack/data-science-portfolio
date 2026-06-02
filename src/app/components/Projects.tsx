@@ -17,7 +17,7 @@ const projects = [
     image: "https://www.reputationx.com/wp-content/uploads/2026/02/sentiment-analysis-1-1.jpg",
     tags: ["Python","TensorFlow", "LSTM (RNN)", "Sklearn","Streamlit"],
     category: "Machine Learning",
-    githubUrl: https://github.com/Yordanos-coder-stack/sentiment-analysis,
+    githubUrl: "https://github.com/Yordanos-coder-stack/sentiment-analysis",
     liveDemoUrl: defaultLiveDemoUrl,
     metrics: { performance: "", responsiveness: "" }
   },
@@ -27,7 +27,7 @@ const projects = [
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxc6e-fy6qdFQr8-7xXnfA6QrK0-Q2J3oMBQ&s",
     tags: ["Python", "K-Means","RandomForestRegressor", "Sklearn"],
     category: "Analytics",
-    githubUrl: https://github.com/Yordanos-coder-stack/FUTURE_DS_01,
+    githubUrl: "https://github.com/Yordanos-coder-stack/FUTURE_DS_01",
     liveDemoUrl: defaultLiveDemoUrl,
     metrics: { performance: "", responsiveness: "" }
   },
@@ -37,7 +37,7 @@ const projects = [
     image: "https://continuinged.utah.edu/_resources/images/_d1/anc/featured-images/mktg231.jpg",
     tags: ["HTML", "CSS", "JavaScript","Node.Js","MongoDB"],
     category: "Web Development",
-    githubUrl: https://github.com/Yordanos-coder-stack/web-project,
+    githubUrl: "https://github.com/Yordanos-coder-stack/web-project",
     liveDemoUrl: defaultLiveDemoUrl,
     metrics: { performance: "95%", responsiveness: "+20%" }
   },
@@ -47,7 +47,7 @@ const projects = [
     image: "https://i0.wp.com/geopard.tech/wp-content/uploads/2022/06/63-min.jpg?w=1200&ssl=1",
     tags: ["Python", "Random Forest", "Sklearn","Gradio","XGBoost"],
     category: "Machine Learning",
-    githubUrl: https://github.com/Yordanos-coder-stack/Crop-Yield-Prediction,
+    githubUrl: "https://github.com/Yordanos-coder-stack/Crop-Yield-Prediction",
     liveDemoUrl: defaultLiveDemoUrl,
     metrics: { accuracy: "95%", improvement: "+20%" }
   },
@@ -57,7 +57,7 @@ const projects = [
     image: "https://miro.medium.com/v2/resize:fit:2000/format:webp/0*rz_QvtXeqqHm5SIa.jpeg",
     tags: ["Python", "Random Forest", "Sklearn","Gradio"],
     category: "Machine Learning",
-    githubUrl: https://github.com/Yordanos-coder-stack/price-prediction,
+    githubUrl: "https://github.com/Yordanos-coder-stack/price-prediction",
     liveDemoUrl: defaultLiveDemoUrl,
     metrics: { accuracy: "95%", improvement: "+23%" }
   },
@@ -67,7 +67,7 @@ const projects = [
     image: "https://images.unsplash.com/photo-1627398242454-45a1465c2479?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXRhJTIwc2NpZW5jZSUyMGFuYWx5dGljcyUyMGNvZGV8ZW58MXx8fHwxNzcwNjE1MTU5fDA&ixlib=rb-4.1.0&q=80&w=1080",
     tags: ["Python", "XGBoost", "Sklearn"],
     category: "Machine Learning",
-    githubUrl: https://github.com/Yordanos-coder-stack/FUTURE_DS_02,
+    githubUrl: "https://github.com/Yordanos-coder-stack/FUTURE_DS_02",
     liveDemoUrl: defaultLiveDemoUrl,
     metrics: { accuracy: "94%", improvement: "+23%" }
   },
