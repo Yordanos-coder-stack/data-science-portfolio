@@ -7,6 +7,9 @@ import { ExternalLink, Github, ChevronRight, Search, SlidersHorizontal } from "l
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { ProjectDetailModal } from "./ProjectDetailModel";
 
+const defaultGithubUrl = "https://github.com/Yordanos-coder-stack";
+const defaultLiveDemoUrl = "https://data-science-portfolio-gules.vercel.app/";
+
 const projects = [
     {
     title: "Sentiment Analaysis",
@@ -14,7 +17,9 @@ const projects = [
     image: "https://www.reputationx.com/wp-content/uploads/2026/02/sentiment-analysis-1-1.jpg",
     tags: ["Python","TensorFlow", "LSTM (RNN)", "Sklearn","Streamlit"],
     category: "Machine Learning",
-     metrics: { performance: "", responsiveness: "" }
+    githubUrl: defaultGithubUrl,
+    liveDemoUrl: defaultLiveDemoUrl,
+    metrics: { performance: "", responsiveness: "" }
   },
   {
     title: "Business Sales Performance Analytics",
@@ -22,7 +27,9 @@ const projects = [
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxc6e-fy6qdFQr8-7xXnfA6QrK0-Q2J3oMBQ&s",
     tags: ["Python", "K-Means","RandomForestRegressor", "Sklearn"],
     category: "Analytics",
-     metrics: { performance: "", responsiveness: "" }
+    githubUrl: defaultGithubUrl,
+    liveDemoUrl: defaultLiveDemoUrl,
+    metrics: { performance: "", responsiveness: "" }
   },
   {
     title: "Website for online marketing",
@@ -30,6 +37,8 @@ const projects = [
     image: "https://continuinged.utah.edu/_resources/images/_d1/anc/featured-images/mktg231.jpg",
     tags: ["HTML", "CSS", "JavaScript","Node.Js","MongoDB"],
     category: "Web Development",
+    githubUrl: defaultGithubUrl,
+    liveDemoUrl: defaultLiveDemoUrl,
     metrics: { performance: "95%", responsiveness: "+20%" }
   },
   {
@@ -38,6 +47,8 @@ const projects = [
     image: "https://i0.wp.com/geopard.tech/wp-content/uploads/2022/06/63-min.jpg?w=1200&ssl=1",
     tags: ["Python", "Random Forest", "Sklearn","Gradio","XGBoost"],
     category: "Machine Learning",
+    githubUrl: defaultGithubUrl,
+    liveDemoUrl: defaultLiveDemoUrl,
     metrics: { accuracy: "95%", improvement: "+20%" }
   },
   {
@@ -46,6 +57,8 @@ const projects = [
     image: "https://miro.medium.com/v2/resize:fit:2000/format:webp/0*rz_QvtXeqqHm5SIa.jpeg",
     tags: ["Python", "Random Forest", "Sklearn","Gradio"],
     category: "Machine Learning",
+    githubUrl: defaultGithubUrl,
+    liveDemoUrl: defaultLiveDemoUrl,
     metrics: { accuracy: "95%", improvement: "+23%" }
   },
   {
@@ -54,6 +67,8 @@ const projects = [
     image: "https://images.unsplash.com/photo-1627398242454-45a1465c2479?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXRhJTIwc2NpZW5jZSUyMGFuYWx5dGljcyUyMGNvZGV8ZW58MXx8fHwxNzcwNjE1MTU5fDA&ixlib=rb-4.1.0&q=80&w=1080",
     tags: ["Python", "XGBoost", "Sklearn"],
     category: "Machine Learning",
+    githubUrl: defaultGithubUrl,
+    liveDemoUrl: defaultLiveDemoUrl,
     metrics: { accuracy: "94%", improvement: "+23%" }
   },
  
@@ -63,6 +78,8 @@ const projects = [
     image: "https://images.unsplash.com/photo-1762279389083-abf71f22d338?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYWNoaW5lJTIwbGVhcm5pbmclMjB2aXN1YWxpemF0aW9ufGVufDF8fHx8MTc3MDUzODI3OXww&ixlib=rb-4.1.0&q=80&w=1080",
     tags: ["OpenCV", "TensorFlow"],
     category: "Computer Vision",
+    githubUrl: defaultGithubUrl,
+    liveDemoUrl: defaultLiveDemoUrl,
     metrics: { accuracy: "96%", fps: "30" }
   },
   {
@@ -71,6 +88,8 @@ const projects = [
     image: "https://images.unsplash.com/photo-1644088379091-d574269d422f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMHRlY2hub2xvZ3klMjBuZXR3b3JrfGVufDF8fHx8MTc3MDU2MjUwMnww&ixlib=rb-4.1.0&q=80&w=1080",
     tags: ["Scikit-learn", "TensorFlow", "PostgreSQL"],
     category: "Machine Learning",
+    githubUrl: defaultGithubUrl,
+    liveDemoUrl: defaultLiveDemoUrl,
     metrics: { precision: "89%", recall: "92%" }
   }
 ];
@@ -260,10 +279,20 @@ export function Projects() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   <div className="absolute bottom-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <Button size="sm" variant="secondary" className="bg-white/90 hover:bg-white">
+                    <Button
+                      size="sm"
+                      variant="secondary"
+                      className="bg-white/90 hover:bg-white"
+                      onClick={() => window.open(project.githubUrl ?? defaultGithubUrl, "_blank")}
+                    >
                       <Github size={16} />
                     </Button>
-                    <Button size="sm" variant="secondary" className="bg-white/90 hover:bg-white">
+                    <Button
+                      size="sm"
+                      variant="secondary"
+                      className="bg-white/90 hover:bg-white"
+                      onClick={() => window.open(project.liveDemoUrl ?? defaultLiveDemoUrl, "_blank")}
+                    >
                       <ExternalLink size={16} />
                     </Button>
                   </div>
