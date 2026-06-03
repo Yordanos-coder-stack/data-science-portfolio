@@ -20,8 +20,8 @@ const projects = [
       githubUrl: "https://github.com/Yordanos-coder-stack/senio_project",
       liveDemoUrl: defaultLiveDemoUrl,
       metrics: {
-        performance: "Real-time image analysis",
-        responsiveness: "Interactive dashboard with instant predictions"
+        performance:"97%",
+        responsiveness:"95%"
       }
     },
     {
