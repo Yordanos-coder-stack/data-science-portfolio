@@ -37,6 +37,45 @@ export function ProjectDetailModal({ project, open, onClose }: ProjectDetailModa
 
   // Extended project details
   const projectDetails: Record<string, any> = {
+    {
+    "Fruit Freshness Detection": {
+      "fullDescription": "Developed an AI-powered fruit freshness detection system that automatically classifies fruits as Fresh or Rotten using computer vision and machine learning techniques. The application allows users to upload images or capture photos directly from a camera, performs image preprocessing and quality analysis, generates explainable AI heatmaps, visualizes prediction confidence through interactive charts, and produces downloadable PDF reports. The entire solution was deployed as an interactive Streamlit web application for real-time fruit quality assessment.",
+      
+      "challenges": [
+        "Building a reliable image classification workflow for varying fruit types and image conditions",
+        "Handling differences in lighting, color variations, image quality, and camera angles",
+        "Providing explainable prediction results instead of black-box classifications",
+        "Designing a user-friendly dashboard with analytics and reporting capabilities",
+        "Deploying the application efficiently while minimizing heavy dependencies"
+      ],
+  
+      "solutions": [
+        "Implemented image preprocessing techniques including resizing, normalization, and color-space transformations",
+        "Developed freshness scoring logic using color, texture, brightness, and spoilage indicators",
+        "Created explainable AI-style heatmap visualizations to highlight influential image regions",
+        "Built an interactive Streamlit dashboard supporting image uploads and camera capture",
+        "Integrated CSV export, PDF report generation, and prediction history tracking",
+        "Designed real-time analytics dashboards using Plotly visualizations"
+      ],
+  
+      "technologies": ["Python","Streamlit","OpenCV","NumPy","Pandas","Plotly","Matplotlib","ReportLab","Computer Vision","Machine Learning"],
+  
+      "outcomes": [
+        "Successfully developed an end-to-end fruit quality assessment application",
+        "Enabled real-time freshness prediction from uploaded or captured images",
+        "Improved model transparency through explainable AI heatmap visualizations",
+        "Provided downloadable PDF reports and CSV prediction results",
+        "Demonstrated practical application of computer vision in food quality monitoring",
+        "Created an interactive analytics dashboard for prediction tracking and insights"
+      ],
+  
+      "timeline": "2–4 weeks",
+  
+      "team": "solo project",
+  
+      "role": "Machine Learning Engineer / Computer Vision Developer"
+    }
+  },
    "Sentiment Analaysis":{
    "fullDescription": "Developed an end-to-end sentiment analysis system using Recurrent Neural Networks (LSTM) to classify movie reviews as positive or negative. The model was trained on the IMDB dataset and integrated into an interactive web application, allowing users to input custom text and receive real-time sentiment predictions.",
     "challenges": [
