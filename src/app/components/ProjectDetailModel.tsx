@@ -73,8 +73,7 @@ export function ProjectDetailModal({ project, open, onClose }: ProjectDetailModa
       "team": "solo project",
   
       "role": "Machine Learning Engineer / Computer Vision Developer"
-    }
-  },
+    },
    "Sentiment Analaysis":{
    "fullDescription": "Developed an end-to-end sentiment analysis system using Recurrent Neural Networks (LSTM) to classify movie reviews as positive or negative. The model was trained on the IMDB dataset and integrated into an interactive web application, allowing users to input custom text and receive real-time sentiment predictions.",
     "challenges": [
