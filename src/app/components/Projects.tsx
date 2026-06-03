@@ -11,6 +11,19 @@ const defaultGithubUrl = "https://github.com/Yordanos-coder-stack";
 const defaultLiveDemoUrl = "https://data-science-portfolio-gules.vercel.app/";
 
 const projects = [
+        {
+      title: "Fruit Freshness Detection",
+      description: "Developed an AI-powered fruit freshness classification system that analyzes fruit images and predicts whether they are fresh or rotten. The solution combines computer vision techniques, image processing, explainable AI visualization, analytics dashboards, and automated report generation within an interactive Streamlit web application.",
+      image: "https://images.unsplash.com/photo-1567306226416-28f0efdc88ce",
+      tags: ["Python", "Computer Vision", "OpenCV", "Streamlit", "Plotly", "Machine Learning"],
+      category: "Deep Learning",
+      githubUrl: "https://github.com/Yordanos-coder-stack/senio_project",
+      liveDemoUrl: defaultLiveDemoUrl,
+      metrics: {
+        performance: "Real-time image analysis",
+        responsiveness: "Interactive dashboard with instant predictions"
+      }
+    },
     {
     title: "Sentiment Analaysis",
     description: "Developed an end-to-end sentiment analysis system using Recurrent Neural Networks (LSTM) to classify movie reviews as positive or negative. The model was trained on the IMDB dataset and integrated into an interactive web application, allowing users to input custom text and receive real-time sentiment predictions.",
