@@ -14,7 +14,7 @@ const projects = [
         {
       title: "Fruit Freshness Detection",
       description: "Developed an AI-powered fruit freshness classification system that analyzes fruit images and predicts whether they are fresh or rotten. The solution combines computer vision techniques, image processing, explainable AI visualization, analytics dashboards, and automated report generation within an interactive Streamlit web application.",
-      image: "https://images.unsplash.com/photo-1567306226416-28f0efdc88ce",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmly1S3dTXJ86NBPD_lSltIadYP7g3_ftg7Q&s",
       tags: ["Python", "Computer Vision", "OpenCV", "Streamlit", "Plotly", "Machine Learning"],
       category: "Deep Learning",
       githubUrl: "https://github.com/Yordanos-coder-stack/senio_project",
