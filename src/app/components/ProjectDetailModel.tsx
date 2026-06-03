@@ -37,7 +37,6 @@ export function ProjectDetailModal({ project, open, onClose }: ProjectDetailModa
 
   // Extended project details
   const projectDetails: Record<string, any> = {
-    {
     "Fruit Freshness Detection": {
       "fullDescription": "Developed an AI-powered fruit freshness detection system that automatically classifies fruits as Fresh or Rotten using computer vision and machine learning techniques. The application allows users to upload images or capture photos directly from a camera, performs image preprocessing and quality analysis, generates explainable AI heatmaps, visualizes prediction confidence through interactive charts, and produces downloadable PDF reports. The entire solution was deployed as an interactive Streamlit web application for real-time fruit quality assessment.",
       
