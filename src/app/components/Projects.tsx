@@ -17,7 +17,7 @@ const projects = [
       image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmly1S3dTXJ86NBPD_lSltIadYP7g3_ftg7Q&s",
       tags: ["Python", "Computer Vision", "OpenCV", "Streamlit", "Plotly", "Machine Learning"],
       category: "Deep Learning",
-      githubUrl: "https://github.com/Yordanos-coder-stack/senio_project",
+      githubUrl: "https://github.com/Yordanos-coder-stack/senior_project",
       liveDemoUrl: defaultLiveDemoUrl,
       metrics: {
         performance:"97%",
