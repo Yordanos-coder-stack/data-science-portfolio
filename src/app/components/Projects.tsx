@@ -61,7 +61,7 @@ const projects = [
     tags: ["Python", "Random Forest", "Sklearn","Gradio","XGBoost"],
     category: "Machine Learning",
     githubUrl: "https://github.com/Yordanos-coder-stack/Crop-Yield-Prediction",
-    liveDemoUrl: defaultLiveDemoUrl,
+    liveDemoUrl: "https://crop-yield-prediction-arari.streamlit.app/",
     metrics: { accuracy: "95%", improvement: "+20%" }
   },
   {
