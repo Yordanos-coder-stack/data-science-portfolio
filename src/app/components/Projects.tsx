@@ -18,7 +18,7 @@ const projects = [
       tags: ["Python", "Computer Vision", "OpenCV", "Streamlit", "Plotly", "Machine Learning"],
       category: "Deep Learning",
       githubUrl: "https://github.com/Yordanos-coder-stack/senior_project",
-      liveDemoUrl: "https://fruit-quality-detection-1us7.onrender.com/",
+      liveDemoUrl: "https://fruit-freshness-app-production.up.railway.app/",
       metrics: {
         performance:"97%",
         responsiveness:"95%"
