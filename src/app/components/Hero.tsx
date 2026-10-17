@@ -100,7 +100,7 @@ export function Hero() {
           </Button>
 
           <Button variant="outline" asChild className="w-full sm:w-auto">
-            <a href="/resume.pdf" download>
+            <a href="/My professional CV.pdf" download>
               <Download className="mr-2" />
               Resume
             </a>
