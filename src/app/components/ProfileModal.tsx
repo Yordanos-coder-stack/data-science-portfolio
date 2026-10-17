@@ -172,9 +172,10 @@ export function ProfileModal({ open, onClose }: ProfileModalProps) {
               className="flex-1 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700"
               onClick={onClose}
             >
-              <a href="/My professional CV.pdf" download>
-              <Download className="mr-2" size={18} />
-              Download Resume
+             <a href="/My professional CV.pdf" download>
+               <Download className="mr-2" size={18} />
+               Download Resume
+             </a>
             </Button>
             <Button
               variant="outline"
